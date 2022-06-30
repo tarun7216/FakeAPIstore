@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from "react-router-dom";
 import { API_URL } from "./URL";
-import '../Components/productpage.css'
+import '../App.css'
 
 
 const Productpage = () => {
@@ -23,34 +23,26 @@ const Productpage = () => {
     }, [state])
     // console.log(productData)
   return (
-    // <div className='tablebox'>
-    //  <center>
-    //     <img src={productData.image} alt={productData.title} style={{"width":"40%"}} />
-    //     <table>
-    //         <tr>
-    //             Id: <td>{productData.id}</td>
-    //         </tr>
-    //         <tr>
-    //             Title:<td>{productData.title}</td>
-    //         </tr>
-    //         <tr>
-    //             Description:<td>{productData.description}</td>
-    //         </tr>
-    //         <tr>
-    //             Price:<td>{productData.price}</td>
-    //         </tr>
-    //     </table>
-    //     <Link to='/productdetails' details={productData}><button>ProductDetaispage</button></Link>
-    //  </center>
-    // </div>
-    <div className="gallery">
-      <div className="content">
-        <img src={productData.image}>
-        <h3>{productData.title}</h3>
-        <h6>${productData.price}</h6>
-        
-        <button className="buy-1">Buy Now</button>
-      </div>
+    <div className='tablebox'>
+     <center>
+        <img src={productData.image} alt={productData.title} style={{"width":"30%"}}/>
+        <table>
+            <tr>
+                Id: <td>{productData.id}</td>
+            </tr>
+            <tr>
+                Title:<td>{productData.title}</td>
+            </tr>
+            <tr>
+                Description:<td>{productData.description}</td>
+            </tr>
+            <tr>
+                Price:<td>{productData.price}</td>
+            </tr>
+        </table>
+        <Link to='/productdetails' state={productData}><button>ProductDetaispage</button></Link>
+     </center>
+    </div>
   )
 }
 

@@ -1,0 +1,9 @@
+.detailsbox {
+    
+    border: 1px solid;
+    padding: 10%;
+
+}
+.detailsbox img {
+    width: 20%;
+}
