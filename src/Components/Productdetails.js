@@ -1,9 +1,14 @@
 import React from 'react'
+import {useLocation} from 'react-router-dom'
 
 const Productdetails = () => {
+    const location = useLocation();
+    const state = location.state;
+    console.log(state)
   return (
-    <div>
-      this is from Product details ProductPage
+    <div detailscard>
+        
+
     </div>
   )
 }

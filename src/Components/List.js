@@ -7,8 +7,8 @@ const List = ({data}) => {
         {(data || []).map((items,index) => {
         // console.log(index)
         return(
-            <div key={items.id}>
-                <ul>
+            <div>
+                <ul key={items.id}>
                     <li>{items.title}</li>
                     <li><img src={items.image}  alt={items.title} style={{"width":"50%"}} /></li>
                     <Link to='/productpage' state={items.id}><button>ProductPage</button></Link>
